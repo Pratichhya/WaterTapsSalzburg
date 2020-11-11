@@ -11,14 +11,14 @@ var MapboxDark = L.tileLayer('https://api.mapbox.com/styles/v1/mapbox/dark-v9/ti
     zoomOffset: -1
 }).addTo(map);
 
-//esri world street basemaps
+//esri world street basemap
 var worldStreetMap = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}', {
     attribution: 'Tiles &copy; Esri &mdash; Source: Esri, DeLorme, NAVTEQ, USGS, Intermap, iPC, NRCAN, Esri Japan, METI, Esri China (Hong Kong), Esri (Thailand), TomTom, 2012',
     maxZoom: 18,
     tileSize: 512,
     zoomOffset: -1
 });
-//esri world imagery basemaps
+//esri world imagery basemap
 var worldImagery = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
     attribution: 'Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community',
     maxZoom: 18,
