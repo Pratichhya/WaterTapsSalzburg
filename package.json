@@ -1,0 +1,17 @@
+{
+  "name": "basic",
+  "version": "1.0.0",
+  "description": "A simple web map during CDE for drinking water tap in Salzburg.",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "CDE"
+  ],
+  "author": "Pratichhya",
+  "license": "ISC",
+  "dependencies": {
+    "leaflet": "^1.7.1"
+  }
+}

@@ -1,0 +1,84 @@
+---
+title: "Water Taps in Salzburg "
+author: "Pratichhya Sharma (Msc CDE)"
+
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+#### Overview
+The web map was prepared with an objective to generate a dynamic map of the taps available within the cities of Salzburg.
+
+
+I choose Water taps in Salzburg as my topic of interest due to my personal experience. For the first time when I visited Salzburg after long day travel, I wanted plenty of drinking water, so soon as I arrived at the main train station I went to Eurospar and grabbed a big bottle of water without realizing it was soda, my mistake as I didn't check properly. As I was already outside of the mall waiting for the bus I saw a fountain and assumed that water taps may be nearby so asked a person standing nearby me but he had no idea nor Google map had a solution at the moment. 
+
+
+
+Hence I believe that Salzburg being a tourist destination, they should be not only provided with the information about famous places but also drinking water taps located nearby those places.
+
+#### Data Used 
+
+* Basemaps
+  
+  There are 4 different base maps available in this web map for a different level of information:
+  + Mapbox Dark Street View
+    
+    The webmap is fetching this web tile service from <a> https://docs.mapbox.com/api/maps/ </a> with a public default access token. The map gives a good visualization of layer overlayed on it with a good detail of information.
+    
+  + Open Street Map
+    
+    The tile service is integrated to the web map from <a> https://leaflet-extras.github.io/leaflet-providers/preview/ </a> which provides several tile map service without the need for any access token. The reason to integrate OSM map is to receive update information on ground details every time any changes are map in the OSM by the people.
+  
+  + ESRI Street Map
+    
+    Preference is also given to the user who prefers in using ESRI Street Map. The tile service is integrated from the same source as Open Street Map.
+    
+  + ESRI World Imagery 
+  
+    For overlaying the data on a satellite and aerial view with a better resolution ESRI World Imagery is integrated with this web map. Along with the Open Street Map and ESRI Street Map, this tile service is also fetched from <a>https://leaflet-extras.github.io/leaflet-providers/preview/</a>
+    
+* Salzburg Boundary
+
+  Administrative Boundary for the City of Salzburg is provided by Organization Group of Zgis in the University of Salzburg.
+  
+* OSM Taps
+
+  The taps data visualized in the map view is integrated from a geoJSON file generated for drinking_water amenity in the <a>https://overpass-turbo.eu/ </a>.  Among the few attributes displayed in the pop up of each data, name and water availability was obtained from the data downloaded whereas the landmark and the image of tap or landmark nearby is included based on the google search results. The tap icon was selected randomly from Google serch for the best map with reference to available basemaps.
+  
+#### Basic Features Available in this Web Map
+* Layer Control
+
+  The icon ![layer controler](D:\3. Masters\semI\Geovisualization and Advanced Cartography\assignments\cartograpgy_assignement1\drinkingWater _V2\drinkingWater\node_modules\leaflet\dist\images\layers.png){width=20} is used to control all the layers that are visualized in the map view section. The layers are divided into two sections: in the base map section when one layer is turned on another is automatically unchecked but in the vector layers any number of layers available can be visualized together.
+* North Arrow
+  
+  To defined the north direction of the interactive map a simple north pointer is placed as an image ![north](D:\3. Masters\semI\Geovisualization and Advanced Cartography\assignments\cartograpgy_assignement1\drinkingWater _V2\drinkingWater\img\north.jpg){width=20}. 
+* Zoom in and Zoom out
+
+  The Zoom in ![zoomin](D:\3. Masters\semI\Geovisualization and Advanced Cartography\assignments\cartograpgy_assignement1\drinkingWater _V2\drinkingWater\img\zoomin.PNG){width=20} and Zoom out ![zoomout](D:\3. Masters\semI\Geovisualization and Advanced Cartography\assignments\cartograpgy_assignement1\drinkingWater _V2\drinkingWater\img\zoomout.PNG){width=20} enables user to zoom out for covering greater extent of map or to zoom in to cover smaller extent.
+
+* Icon enlargement
+  
+  The water tap icons are enlarged when user hover over that feature to highlight the feature underneath the mouse pointer. The enlarged icon is reset back to its normal size once the mouse pointer is moved away from the feature.
+  
+* Print Map
+  
+  The print icon ![print](D:\3. Masters\semI\Geovisualization and Advanced Cartography\assignments\cartograpgy_assignement1\drinkingWater _V2\drinkingWater\img\printrmd.PNG){width=20} located at the top-left of the map view allows user to print the map in the extent zoomed at the moment of printing with the details available in the map in different layout including custom layout.
+  
+* Map Scale
+  An imperical map scale ![scale](D:\3. Masters\semI\Geovisualization and Advanced Cartography\assignments\cartograpgy_assignement1\drinkingWater _V2\drinkingWater\img\scale.PNG){width=20}is located at the bottom-right corner of the map view gives user an idea of the zoom in extent in terms of kilometer against mile.
+  
+* Legend
+  
+  The legends for the layer displayed in map view can be visualized at the bottom-left corner.
+  
+* Event Listener
+  
+  An event has been added to map that gives a pops up of latitude and longitude of any location double clicked on the map.
+
+
+###### Credit:
+Prof. Barbara Hofer, Department of Geoinformation, University of Salzburg
+
