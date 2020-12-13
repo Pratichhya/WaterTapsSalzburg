@@ -136,7 +136,7 @@ legend.onAdd = function (map) {
     var div = L.DomUtil.create('div', 'info legend'),
     
         grades = ["<b>WaterTaps</b>", "<b> Salzburg City Boundary </b>"],
-        labels = ["./img/tap.PNG","./img/boundary.PNG"];
+        labels = ["./img/tap.png","./img/boundary.PNG"];
 
     // combining the lables with its images based on the index number through looping
     div.innerHTML += '<b>Legend </b><br></br>'
